@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Colors */
+    --white: #fff;
+    --light-blue: #40b5d5;
+    --blue: #273ab7;
+    --red: #df3838;
+    --dark-gradient: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+
+    /* Font Sizes */
+    --fs-xs: 0.8125rem; /* 13px */
+    --fs-sm: 0.875rem; /* 14px */
+    --fs-md: 1rem; /* 16px */
+    --fs-lg: 1.5rem; /* 24px */
+    --fs-xl: 1.75rem; /* 28px */
+    --fs-2xl: 2rem; /* 32px */
+    --fs-3xl: 2.75rem; /* 44px */
+
+    /* Radius */
+    --border-radius: 1rem; /* 4px */
+
+    /* -------------------------------- */
+
+    --radius: var(--border-radius);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    font-size: var(--fs-md);
+    font-weight: 600;
+  }
+  body {
+    @apply bg-background text-foreground;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background: var(--dark-gradient);
+    color: var(--white);
+  }
+}

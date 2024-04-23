@@ -1,9 +1,12 @@
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/shared/styles/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const mono = Open_Sans({
+  weight: ["400", "600", "700", "800"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Internet Shop",
@@ -17,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={mono.className}>{children}</body>
     </html>
   );
 }

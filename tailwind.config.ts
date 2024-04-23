@@ -17,6 +17,15 @@ const config = {
         "2xl": "1400px",
       },
     },
+    fontSize: {
+      xs: "var(--fs-xs)",
+      sm: "var(--fs-sm)",
+      md: "var(--fs-md)",
+      lg: "var(--fs-lg)",
+      xl: "var(--fs-xl)",
+      "2xl": "var(--fs-2xl)",
+      "3xl": "var(--fs-3xl)",
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -27,36 +36,22 @@ const config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          blue: "var(--blue)",
+          "light-blue": "var(--light-blue)",
+          error: "var(--red)",
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        1: "var(--border-radius)",
+        2: "calc(var(--border-radius) * 2)",
+        3: "calc(var(--border-radius) * 3)",
+        4: "calc(var(--border-radius) * 4)",
+        5: "calc(var(--border-radius) * 5)",
+        10: "calc(var(--border-radius) * 10)",
+        full: "50%",
+      },
+      boxShadow: {
+        blue: "0px 0px 11px 0px var(--blue)",
       },
       keyframes: {
         "accordion-down": {
