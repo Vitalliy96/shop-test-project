@@ -17,7 +17,6 @@ import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
   email: z.string().email(),
-  password: z.string().min(6),
 });
 
 const ForgotPasswordForm = () => {
@@ -28,9 +27,7 @@ const ForgotPasswordForm = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-  }
+  const onSubmit = (value: z.infer<typeof formSchema>) => console.log(value);
 
   return (
     <Form {...form}>

@@ -76,7 +76,11 @@ React.HTMLAttributes<HTMLDivElement>
 
   return (
     <FormItemContext.Provider value={{ id }}>
-      <div ref={ref} className={cn("space-y-2", className)} {...props} />
+      <div
+        ref={ref}
+        className={cn("space-y-1", "!mt-[15px]", className)}
+        {...props}
+      />
     </FormItemContext.Provider>
   );
 });
@@ -113,6 +117,7 @@ React.ComponentPropsWithoutRef<typeof Slot>
 
   return (
     <Slot
+      className="bg-primary-dark-blue"
       ref={ref}
       id={formItemId}
       aria-describedby={

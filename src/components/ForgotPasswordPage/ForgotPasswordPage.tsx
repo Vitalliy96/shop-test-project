@@ -25,7 +25,11 @@ const ForgotPasswordPage = () => {
 
       <div className="text-center">
         <p className="mt-[30px] mb-[10px]">
-          <Button onClick={() => router.back()} variant="default" className="">
+          <Button
+            onClick={() => router.back()}
+            variant="default"
+            className="h-[30px] border !rounded-2 border-primary-light-blue"
+          >
             <ChevronLeft />
             Back
           </Button>
