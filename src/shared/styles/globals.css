@@ -48,4 +48,20 @@
     background: var(--dark-gradient);
     color: var(--white);
   }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    background: var(--dark-blue);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: 1px solid var(--light-blue);
+    background: var(--light-blue);
+    border-radius: 5px;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

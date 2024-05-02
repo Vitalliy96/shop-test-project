@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import ProductCard from "../ProductCard/ProductCard";
 import { Button } from "../ui/button";
 
-import { Product } from "@/types/productTypes";
+import { Product } from "@/models/product";
 
 interface Props {
   products: Product[];
