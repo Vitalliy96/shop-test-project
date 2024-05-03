@@ -17,7 +17,7 @@ interface Props {
 
 const ProductCard = ({ product }: Props) => (
   <Link href={`/products/${product.id}`}>
-    <div className="overflow-hidden relative flex flex-col justify-between border rounded-1 border-primary-light-blue bg-primary-dark-blue">
+    <div className="overflow-hidden relative flex flex-col justify-between h-full border rounded-1 border-primary-light-blue bg-primary-dark-blue">
       <div className="flex justify-center h-[250px] p-2 mb-4 bg-white border-b border-b-primary-light-blue">
         <Image
           src={product.images[0]}
