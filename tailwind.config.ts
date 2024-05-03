@@ -69,6 +69,9 @@ const config = {
       boxShadow: {
         blue: "0px 0px 11px 0px var(--blue)",
       },
+      minHeight: {
+        screen: "calc(100vh - 102px)",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
