@@ -20,7 +20,7 @@ const FreshProducts = ({ products }: Props) => {
         </h2>
         <Button
           onClick={() => router.push("/products")}
-          className="border border-primary-light-blue shadow-blue rounded-3 text-primary-yellow transition-all duration-500 hover:text-primary-dark-blue  hover:bg-primary-light-blue"
+          className="border border-primary-light-blue shadow-blue rounded-3 text-primary-yellow transition-all duration-500 hover:text-primary-dark-blue hover:bg-primary-light-blue"
         >
           Shop All
         </Button>
