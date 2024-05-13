@@ -2,6 +2,7 @@ import create from "zustand";
 import axios from "axios";
 
 import { Product } from "@/models/product";
+import { BASE_URL, ENDPOINTS } from "@/services/__endpoints";
 
 interface ProductState {
   limit: number;
@@ -37,7 +38,7 @@ const useProductStore = create<ProductState>((set, get) => ({
     try {
       const { limit, skip } = get();
       const response = await axios.get(
-        `https://dummyjson.com/products?limit=${limit}&skip=${skip}`
+        `${BASE_URL}${ENDPOINTS.products.params(limit, skip)}`
       );
       set({
         products: response.data.products,
@@ -55,7 +56,9 @@ const useProductStore = create<ProductState>((set, get) => ({
   fetchProductById: async (id: string | string[]) => {
     set({ loading: true, selectedProduct: null });
     try {
-      const response = await axios.get(`https://dummyjson.com/products/${id}`);
+      const response = await axios.get(
+        `${BASE_URL}${ENDPOINTS.products.byId(id)}`
+      );
       set({
         selectedProduct: response.data,
         loading: false,
@@ -72,7 +75,7 @@ const useProductStore = create<ProductState>((set, get) => ({
     set({ loading: true });
     try {
       const response = await axios.get(
-        `https://dummyjson.com/products/search?q=${query}`
+        `${BASE_URL}${ENDPOINTS.products.search(query)}`
       );
       set({
         products: response.data.products,
